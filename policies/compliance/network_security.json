@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "displayName": "Sample Placeholder Policy",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "This is a placeholder policy used to populate the repository. Update with organization-specific logic as needed.",
+    "metadata": {
+      "version": "0.1.0",
+      "category": "Sample",
+      "notes": "Replace this file with real policy logic when ready."
+    },
+    "parameters": {},
+    "policyRule": {
+      "if": {
+        "field": "type",
+        "equals": "Microsoft.Resources/subscriptions/resourceGroups"
+      },
+      "then": {
+        "effect": "audit"
+      }
+    }
+  }
+}
