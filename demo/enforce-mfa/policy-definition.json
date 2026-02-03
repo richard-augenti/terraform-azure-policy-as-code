@@ -1,0 +1,25 @@
+{
+  "properties": {
+    "displayName": "Enforce Multi-Factor Authentication",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "Enforces multi-factor authentication for resource access",
+    "metadata": {
+      "category": "Security",
+      "version": "1.0.0"
+    },
+    "parameters": {},
+    "policyRule": {
+      "if": {
+        "field": "type",
+        "equals": "Microsoft.Authorization/roleAssignments"
+      },
+      "then": {
+        "effect": "audit",
+        "details": {
+          "type": "Microsoft.Authorization/policies/audit"
+        }
+      }
+    }
+  }
+}
